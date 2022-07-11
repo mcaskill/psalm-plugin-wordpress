@@ -115,7 +115,7 @@ class Plugin implements PluginEntryPointInterface, AfterEveryFunctionCallAnalysi
 			return;
 		}
 
-		$wpHooksDataDir = self::getVendorDir('vendor/johnbillion/wp-hooks/hooks');
+		$wpHooksDataDir = self::getVendorDir('vendor/wp-hooks/wordpress-core/hooks');
 
 		static::loadHooksFromFile( $wpHooksDataDir . '/actions.json' );
 		static::loadHooksFromFile( $wpHooksDataDir . '/filters.json' );
