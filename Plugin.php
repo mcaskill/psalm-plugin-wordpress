@@ -175,6 +175,12 @@ class Plugin implements PluginEntryPointInterface, AfterEveryFunctionCallAnalysi
 			}
 
 			static::registerHook( $hook['name'], $parsed_types, $hook['type'] );
+
+			if ( isset( $hook['aliases'] ) ) {
+				foreach ( $hook['aliases'] as $alias_name ) {
+					static::registerHook( $alias_name, $parsed_types, $hook['type'] );
+				}
+			}
 		}
 	}
 
