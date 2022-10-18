@@ -1,5 +1,5 @@
 {
-    "name": "humanmade/psalm-plugin-wordpress",
+    "name": "mcaskill/psalm-plugin-wordpress",
     "description": "WordPress stubs and plugin for Psalm.",
     "type": "psalm-plugin",
     "license": "MIT",

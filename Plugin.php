@@ -63,7 +63,7 @@ class Plugin implements PluginEntryPointInterface, AfterEveryFunctionCallAnalysi
 	 */
 	private static function getVendorDir(string $path) : string {
 		$vendor = 'vendor/';
-		$self = 'humanmade/psalm-plugin-wordpress';
+		$self = 'mcaskill/psalm-plugin-wordpress';
 
 		if (0 !== strpos($path, $vendor)) {
 			throw new \BadMethodCallException(
