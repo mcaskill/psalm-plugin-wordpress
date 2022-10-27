@@ -102,7 +102,7 @@ class FiltersTest extends BaseTestCase {
 					echo 'some stuff';
 				} );
 				EOD,
-				'error_message' => 'HookNotFound',
+				'error_message' => 'InvalidHook',
 			],
 		];
 	}

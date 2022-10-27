@@ -312,7 +312,7 @@ class Plugin implements
 		if ( $is_action && ! in_array( $hook['hook_type'], [ 'action', 'action_reference' ], true ) ) {
 			if ( $code_location ) {
 				IssueBuffer::accepts(
-					new HookNotFound(
+					new InvalidHook(
 						'Hook "' . $hook_name . '" is a filter not an action',
 						$code_location
 					),
@@ -326,7 +326,7 @@ class Plugin implements
 		if ( ! $is_action && ! in_array( $hook['hook_type'], [ 'filter', 'filter_reference' ], true ) ) {
 			if ( $code_location ) {
 				IssueBuffer::accepts(
-					new HookNotFound(
+					new InvalidHook(
 						'Hook "' . $hook_name . '" is an action not a filter',
 						$code_location
 					),
@@ -505,3 +505,5 @@ class HookNodeVisitor extends PhpParser\NodeVisitorAbstract {
 }
 
 class HookNotFound extends Psalm\Issue\PluginIssue {}
+
+class InvalidHook extends \Psalm\Issue\PluginIssue {}
