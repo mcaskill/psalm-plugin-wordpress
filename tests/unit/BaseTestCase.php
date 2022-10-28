@@ -7,6 +7,7 @@ use Psalm\Config;
 use Psalm\Internal\Analyzer\FileAnalyzer;
 use Psalm\Internal\Analyzer\ProjectAnalyzer;
 use Psalm\Internal\Provider\FileStorageProvider;
+use Psalm\Internal\Provider\Providers;
 use Psalm\Tests\Internal\Provider;
 
 abstract class BaseTestCase extends Psalm\Tests\TestCase {
@@ -43,14 +44,5 @@ abstract class BaseTestCase extends Psalm\Tests\TestCase {
 			$codebase->config->shortenFileName( $file_path )
 		);
 		$file_analyzer->analyze( $context );
-	}
-}
-
-class TestConfig extends Psalm\Tests\TestConfig {
-	protected function getContents() : string {
-		return '<?xml version="1.0"?>
-			<projectFiles>
-				<directory name="./" />
-			</projectFiles>';
 	}
 }

@@ -29,12 +29,12 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"PsalmWordPress\\": ["."]
+			"PsalmWordPress\\": [ ".", "inc" ]
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"PsalmWordPress\\Tests\\": ["tests", "tests/unit"],
+			"PsalmWordPress\\Tests\\": [ "tests", "tests/unit" ],
 			"Psalm\\Tests\\": "vendor/vimeo/psalm/tests/"
 		}
 	},
